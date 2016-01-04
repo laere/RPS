@@ -573,10 +573,10 @@ div {
     @media (max-width: 940px) {
       .container > .header {
         font-size: 2em; } }
-  .container > .winner {
+  .container > div #winner {
     font-size: 2em; }
     @media (max-width: 940px) {
-      .container > .winner {
+      .container > div #winner {
         font-size: 1.5em; } }
   .container > .inner-container {
     width: 80%;
