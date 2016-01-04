@@ -1,0 +1,64 @@
+///// IMPORTS /////////////////////////
+@import '_normalize';
+@import 'bourbon/bourbon';
+@import 'base/base';
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro:400,400italic,700,700italic);
+
+
+///// VARIABLES /////////////////////////
+$white: #fff;
+$black: #000;
+$font: 'Anonymous Pro', sans-serif;
+
+
+
+///// BASE STYLES /////////////////////////
+html {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font;
+}
+
+img {
+  max-width: 100%;
+  height: auto !important;
+}
+
+
+///// ELEMENT STYLES /////////////////////////
+.container {
+  width: 80%;
+  height: 700px;
+  background-color: red;
+  margin: 120px auto;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  @media (max-width:360px) {
+    width: 90%;
+  }
+      > .row {
+        width: 60%;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        background-color: blue;
+        @media (max-width: 1250px) {
+          width: 70%;
+        }
+        @media (max-width: 769px) {
+          width: 80%;
+          flex-flow: column;
+        }
+      }
+}
