@@ -4,7 +4,6 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro:400,400italic,700,700italic);
 html {
   -ms-text-size-adjust: 100%;
   /* 2 */
@@ -533,44 +532,61 @@ picture {
 
 html {
   box-sizing: border-box;
+  font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   padding: 0;
   margin: 0; }
 
 *, *:after, *:before {
   box-sizing: border-box; }
 
-body {
-  font-family: "Anonymous Pro", sans-serif; }
-
 img {
   max-width: 100%;
-  height: auto !important; }
+  height: auto; }
+
+div {
+  display: block; }
 
 .container {
-  width: 80%;
-  height: 700px;
-  background-color: red;
+  width: 90%;
+  height: 800px;
   margin: 120px auto;
   display: flex;
   flex-flow: column wrap;
-  justify-content: center;
-  align-items: center; }
-  @media (max-width: 360px) {
+  align-items: center;
+  justify-content: center; }
+  @media (max-width: 940px) {
     .container {
-      width: 90%; } }
-  .container > .row {
-    width: 60%;
+      flex-flow: column wrap;
+      height: 1200px; } }
+  .container > .header {
+    font-size: 3.5em; }
+  .container > .winner {
+    font-size: 2em; }
+  .container > .inner-container {
+    width: 80%;
+    height: 500px;
     display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-    background-color: blue; }
-    @media (max-width: 1250px) {
-      .container > .row {
-        width: 70%; } }
-    @media (max-width: 769px) {
-      .container > .row {
-        width: 80%;
-        flex-flow: column; } }
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center; }
+    @media (max-width: 940px) {
+      .container > .inner-container {
+        height: 900px; } }
+    .container > .inner-container > .row {
+      width: 80%;
+      height: auto;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-around;
+      align-items: center; }
+      @media (max-width: 1270px) {
+        .container > .inner-container > .row {
+          width: 90%; } }
+      @media (max-width: 940px) {
+        .container > .inner-container > .row {
+          flex-flow: column wrap; } }
+      .container > .inner-container > .row > .items {
+        flex: 1 100%;
+        text-align: center; }
 
 /*# sourceMappingURL=main.css.map */
