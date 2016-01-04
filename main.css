@@ -535,7 +535,8 @@ html {
   font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   padding: 0;
   margin: 0;
-  text-align: center; }
+  text-align: center;
+  line-height: 1.5; }
 
 *, *:after, *:before {
   box-sizing: border-box; }
@@ -559,8 +560,16 @@ div {
     .container {
       flex-flow: column wrap;
       height: 1200px; } }
+  .container > .footer {
+    background-color: #700353;
+    width: 60%;
+    color: #fff;
+    border-radius: 30px;
+    padding: 10px 0;
+    box-shadow: 0 8px 6px -6px black; }
   .container > .header {
-    font-size: 3.5em; }
+    font-size: 3.5em;
+    text-shadow: 1px 1px 3px black; }
     @media (max-width: 940px) {
       .container > .header {
         font-size: 2em; } }
@@ -595,5 +604,8 @@ div {
       .container > .inner-container > .row > .items {
         flex: 1 100%;
         padding: 20px 0; }
+        .container > .inner-container > .row > .items > div input[type=submit] {
+          width: 60%;
+          box-shadow: 0 8px 6px -6px black; }
 
 /*# sourceMappingURL=main.css.map */
