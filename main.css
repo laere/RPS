@@ -534,7 +534,8 @@ html {
   box-sizing: border-box;
   font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  text-align: center; }
 
 *, *:after, *:before {
   box-sizing: border-box; }
@@ -560,8 +561,14 @@ div {
       height: 1200px; } }
   .container > .header {
     font-size: 3.5em; }
+    @media (max-width: 940px) {
+      .container > .header {
+        font-size: 2em; } }
   .container > .winner {
     font-size: 2em; }
+    @media (max-width: 940px) {
+      .container > .winner {
+        font-size: 1.5em; } }
   .container > .inner-container {
     width: 80%;
     height: 500px;
@@ -587,6 +594,6 @@ div {
           flex-flow: column wrap; } }
       .container > .inner-container > .row > .items {
         flex: 1 100%;
-        text-align: center; }
+        padding: 20px 0; }
 
 /*# sourceMappingURL=main.css.map */
