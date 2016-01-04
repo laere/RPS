@@ -1,4 +1,11 @@
 window.onload = function() {
+
+  //vars scope may change in the future.
+  var CHOICE_ROCK = document.querySelector('#rock'),
+      CHOICE_PAPER = document.querySelector('#paper'),
+      CHOICE_SCISSORS = document.querySelector('#scissors'),
+      WINNER_TXT = document.querySelector('#winner');
+
   //user's choice received through input field
   var USER_CHOICE = function() {
     //get value of user input
@@ -37,11 +44,11 @@ window.onload = function() {
   //Break up into functions
   function ROCK(USER_CHOICE, COMPUTER_CHOICE) {
     //Rock
-    if (USER_CHOICE === 'rock' && COMPUTER_CHOICE === 'scissors'){
+    if (USER_CHOICE === 'rock' && COMPUTER_CHOICE === 'scissors') {
       if (USER_CHOICE === 'rock' && COMPUTER_CHOICE === 'paper') {
-        return; //paper wins!
+         winner.innerHTML = 'PAPER WINS!';
       } else {
-        return; //rock wins!
+         winner.innerHTML = 'ROCK WINS!';
       }
     }
   }
@@ -49,18 +56,18 @@ window.onload = function() {
     //Paper
     if (USER_CHOICE === 'paper' && COMPUTER_CHOICE === 'rock') {
       if (USER_CHOICE === 'paper' && COMPUTER_CHOICE === 'scissors') {
-        return; //scissors wins!
+        winner.innerHTML = 'SCISSORS WINS!';
       } else {
-        return;//paper wins!
+        winner.innerHTML = 'PAPER WINS!';
       }
     }
     function SCISSORS(USER_CHOICE, COMPUTER_CHOICE) {
       //scissors
-      if (USER_CHOICE === 'scissors' && COMPUTER_CHOICE === 'rock') {
-        if (USER_CHOICE === 'scissors' && COMPUTER_CHOICE === 'paper') {
-          return; //scissors wins
+      if (USER_CHOICE === 'scissors' && COMPUTER_CHOICE === 'paper') {
+        if (USER_CHOICE === 'scissors' && COMPUTER_CHOICE === 'rock') {
+          winner.innerHTML = 'SCISSORS WINS!';
         } else {
-          return; //rock wins
+          winner.innerHTML = 'ROCK WINS!';
         }
       }
     }
