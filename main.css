@@ -550,8 +550,8 @@ div {
 
 .container {
   width: 90%;
-  height: 800px;
-  margin: 120px auto;
+  height: 1000px;
+  margin: 0 auto;
   display: flex;
   flex-flow: column wrap;
   align-items: center;
@@ -559,7 +559,26 @@ div {
   @media (max-width: 940px) {
     .container {
       flex-flow: column wrap;
-      height: 1200px; } }
+      height: 1400px; } }
+  .container > #scoreboard {
+    text-align: center;
+    font-size: 1.5em;
+    border: 2px solid #222;
+    margin-bottom: 15px;
+    padding: 15px;
+    width: 30%;
+    position: sticky;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.8); }
+    @media (max-width: 940px) {
+      .container > #scoreboard {
+        width: 50%; } }
+    @media (max-width: 640px) {
+      .container > #scoreboard {
+        width: 80%; } }
+    @media (max-width: 440px) {
+      .container > #scoreboard {
+        width: 100%; } }
   .container > .footer {
     background-color: #700353;
     width: 60%;
@@ -567,6 +586,9 @@ div {
     border-radius: 30px;
     padding: 10px 0;
     box-shadow: 0 8px 6px -6px black; }
+    @media (max-width: 440px) {
+      .container > .footer {
+        width: 100%; } }
   .container > .header {
     font-size: 3.5em;
     text-shadow: 1px 1px 3px black; }
