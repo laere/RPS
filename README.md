@@ -5,6 +5,12 @@
 
 Keep track of player wins and computer wins **DONE**
 
+Make the game more visually appealing.
+
+Allow users to tweet their score.
+
+Add animations for specific actions.
+
 Add Local Storage!
 
 Add funny choices like chuck norris, batman, etc.
