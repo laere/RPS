@@ -1,5 +1,4 @@
 window.onload = function() {
-
   //vars scope may change in the future.
   var CHOICE_ROCK = document.querySelector('#rock'),
       CHOICE_PAPER = document.querySelector('#paper'),
@@ -11,84 +10,66 @@ window.onload = function() {
       CHOICE_ROCK.addEventListener('click', USER_CHOICE, false);
       CHOICE_PAPER.addEventListener('click', USER_CHOICE, false);
       CHOICE_SCISSORS.addEventListener('click', USER_CHOICE, false);
-    //click event set up
-  //  document.querySelector('#container').addEventListener ('click', function(e) {
-
-  //user's choice received through input field
+  // Return user choice value;
   function USER_CHOICE(e) {
+    var compChoice = COMPUTER_CHOICE();
     var el = e.target;
     if (el === CHOICE_ROCK) {
-      WINNER_TXT.innerHTML = "This is Rock";
-      COMP_TXT.innerHTML = COMPUTER_CHOICE() + ' is the computers choice!';
-      console.log('I am rock');
+      COMP_TXT.innerHTML = compChoice + ' is the computers choice!';
+      console.log('USER CHOICE: ROCK');
+      console.log('COMPS CHOICE: ' + compChoice);
+      ROCK('rock', compChoice);
     } else if (el === CHOICE_PAPER) {
-      WINNER_TXT.innerHTML = "This is Paper";
-      COMP_TXT.innerHTML = COMPUTER_CHOICE() + ' is the computers choice!';
+      COMP_TXT.innerHTML = compChoice + ' is the computers choice!';
       console.log('I am paper');
+      PAPER('paper', compChoice);
     } else if (el === CHOICE_SCISSORS) {
-      WINNER_TXT.innerHTML = "This is Scissors";
-      COMP_TXT.innerHTML = COMPUTER_CHOICE() + ' is the computers choice!';
+      COMP_TXT.innerHTML = compChoice + ' is the computers choice!';
       console.log('I am scissors');
+      SCISSORS('scissors', compChoice);
     }
   e.stopPropagation();
 }
-  //Determine computer choice (maybe use a switch?)
-  var COMPUTER_CHOICE = function() {
+  // Return value of computer choice
+  function COMPUTER_CHOICE() {
     var num = Math.floor(Math.random() * 3) + 1;
-    var choice = '';
+    console.log('COMP CHOICE number: ' + num);
     if (num === 1) {
-      choice = 'rock';
+      return 'rock';
     } else if (num === 2) {
-      choice = 'paper';
-    } else {
-      choice = 'scissors';
+      return 'paper';
+    } else if (num === 3) {
+      return 'scissors';
     }
-    return choice;
-  };
-  // switch (num) {
-  //   case 1:
-  //     choice = 'rock';
-  //     break;
-  //   case 2:
-  //     choice = 'paper';
-  //   break;
-  //   case 3:
-  //     choice ='scissors';
-  //   break;
-  //   default :
-  // }
-  var TIE = function(USER_CHOICE, COMPUTER_CHOICE) {
-    return USER_CHOICE === COMPUTER_CHOICE ? true : false;
-  };
-  //Break up into functions
+  }
+  // Break up into functions
+  // compare values of user choice and computer chocie
   function ROCK(USER_CHOICE, COMPUTER_CHOICE) {
-    //Rock
-    if (USER_CHOICE === CHOICE_ROCK && COMPUTER_CHOICE === 'scissors') {
-      if (USER_CHOICE === CHOICE_ROCK && COMPUTER_CHOICE === 'paper') {
-         winner.innerHTML = 'PAPER WINS!';
-      } else {
-         winner.innerHTML = 'ROCK WINS!';
-      }
+    if (USER_CHOICE === CHOICE_ROCK.id && COMPUTER_CHOICE === 'scissors') {
+      WINNER_TXT.innerHTML = 'ROCK WINS!';
+    } else if (USER_CHOICE === CHOICE_ROCK.id && COMPUTER_CHOICE === 'paper') {
+      WINNER_TXT.innerHTML = 'PAPER WINS!';
+    } else if (USER_CHOICE === CHOICE_ROCK.id && COMPUTER_CHOICE === 'rock') {
+      WINNER_TXT.innerHTML = 'ITS A TIE!!!!!';
     }
   }
   function PAPER(USER_CHOICE, COMPUTER_CHOICE)  {
     //Paper
-    if (USER_CHOICE === CHOICE_PAPER && COMPUTER_CHOICE === 'rock') {
-      if (USER_CHOICE === CHOICE_PAPER && COMPUTER_CHOICE === 'scissors') {
-        winner.innerHTML = 'SCISSORS WINS!';
-      } else {
-        winner.innerHTML = 'PAPER WINS!';
+    if (USER_CHOICE === CHOICE_PAPER.id && COMPUTER_CHOICE === 'rock') {
+      console.log('paper wins');
+        WINNER_TXT.innerHTML = 'PAPER WINS!';
+      } else if (USER_CHOICE === CHOICE_PAPER.id && COMPUTER_CHOICE === 'scissors') {
+          WINNER_TXT.innerHTML = 'SCISSORS WIN!';
+          console.log(WINNER_TXT);
       }
     }
     function SCISSORS(USER_CHOICE, COMPUTER_CHOICE) {
       //scissors
-      if (USER_CHOICE === CHOICE_SCISSORS && COMPUTER_CHOICE === 'paper') {
-        if (USER_CHOICE === CHOICE_SCISSORS && COMPUTER_CHOICE === 'rock') {
-          winner.innerHTML = 'SCISSORS WINS!';
-        } else {
-          winner.innerHTML = 'ROCK WINS!';
-        }
+      if (USER_CHOICE === CHOICE_SCISSORS.id && COMPUTER_CHOICE === 'paper') {
+        console.log('scissors win');
+          WINNER_TXT.innerHTML = 'SCISSORS WINS!';
+      } else if (USER_CHOICE === CHOICE_SCISSORS.id && COMPUTER_CHOICE === 'rock') {
+              WINNER_TXT.innerHTML = 'ROCK WINS!';
       }
     }
-  }
 };
