@@ -61,6 +61,8 @@ window.onload = function() {
       } else if (USER_CHOICE === CHOICE_PAPER.id && COMPUTER_CHOICE === 'scissors') {
           WINNER_TXT.innerHTML = 'SCISSORS WIN!';
           console.log(WINNER_TXT);
+      } else if (USER_CHOICE === CHOICE_PAPER.id && COMPUTER_CHOICE === 'paper') {
+        WINNER_TXT.innerHTML = 'ITS A TIE!!!!!';
       }
     }
     function SCISSORS(USER_CHOICE, COMPUTER_CHOICE) {
@@ -70,6 +72,8 @@ window.onload = function() {
           WINNER_TXT.innerHTML = 'SCISSORS WINS!';
       } else if (USER_CHOICE === CHOICE_SCISSORS.id && COMPUTER_CHOICE === 'rock') {
               WINNER_TXT.innerHTML = 'ROCK WINS!';
+      } else if (USER_CHOICE === CHOICE_SCISSORS.id && COMPUTER_CHOICE === 'scissors') {
+        WINNER_TXT.innerHTML = 'ITS A TIE!!!!!';
       }
     }
 };
