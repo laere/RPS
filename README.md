@@ -3,6 +3,8 @@
 
 <h1>Things to add:</h1>
 
-Keep track of player wins and computer wins
+Keep track of player wins and computer wins **DONE**
+
+Add Local Storage!
 
 Add funny choices like chuck norris, batman, etc.
