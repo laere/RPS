@@ -17,7 +17,7 @@ Make the game more visually appealing.
 
 Allow users to tweet their score.
 
-Add animations for specific actions. Add toggle for animations.
+Add animation **DONE**
 
 Add Local Storage!
 
