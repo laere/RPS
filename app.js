@@ -9,14 +9,25 @@ window.onload = function() {
       USER_SCORE_EL = document.querySelector('#user-score'),
       COMP_SCORE_EL = document.querySelector('#computer-score'),
       PLAYER_CHOICE = document.querySelector('#player-choice'),
+      TWEET = document.querySelector('#tweet'),
       USER_SCORE = 0,
       COMPUTER_SCORE = 0,
-      GAME_SCORE = {}; // add pt to each per win, stringify to local Storage
+      GAME_SCORE = { USER_SCORE: 0, COMPUTER_SCORE: 0}, // add pt to each per win, stringify to local Storage
       key = 'scores';
 
   CHOICE_ROCK.addEventListener('click', USER_CHOICE, false);
   CHOICE_PAPER.addEventListener('click', USER_CHOICE, false);
   CHOICE_SCISSORS.addEventListener('click', USER_CHOICE, false);
+  //tweet your score
+  TWEET.addEventListener('click', function() {
+    var message = 'Checkout this awesome Rock, Paper and Scissors game!';
+    message += ' https://www.github.com/laere/RPS - ';
+    message += ' My score was ' + USER_SCORE + '.  The computers score was ' + COMPUTER_SCORE + ' .';
+    message += ' Think you can beat me?';
+    message += ' I bet you cant!';
+    window.open('https://twitter.com/intent/tweet?text=' + message);
+  }, false );
+
   // Return user choice value;
   function USER_CHOICE(e) {
     var compChoice = COMPUTER_CHOICE();
@@ -27,7 +38,7 @@ window.onload = function() {
       console.log(USER_SCORE);
       console.log(COMPUTER_SCORE);
       ROCK('rock', compChoice);
-      PLAYER_CHOICE_STYLE('ROCK');
+      PLAYER_CHOICE_STYLE('ROCK!');
       USER_SCORE_EL.innerHTML = 'Your Score : ' + USER_SCORE;
       COMP_SCORE_EL.innerHTML = 'Computer Score : ' + COMPUTER_SCORE;
     } else if (el === CHOICE_PAPER) {
@@ -127,7 +138,7 @@ window.onload = function() {
     PLAYER_CHOICE.style.fontWeight = 'bold';
     PLAYER_CHOICE.style.backgroundColor = '#555';
     PLAYER_CHOICE.style.color = 'white';
-    PLAYER_CHOICE.style.border = '2px solid #444';
+    PLAYER_CHOICE.style.borderBottom = '3px solid #444';
     PLAYER_CHOICE.style.borderRadius = '30px';
     PLAYER_CHOICE.style.padding ='10px';
   }
