@@ -7,6 +7,8 @@ Keep track of player wins and computer wins **DONE**
 
 Make computers choice an image.
 
+When player chooses item, hide two that aren't chosen, center chosen item.
+
 Make the game more visually appealing.
 
 Allow users to tweet their score.
