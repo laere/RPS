@@ -46,16 +46,18 @@ div {
   justify-content: center;
   @media (max-width: 940px) {
     flex-flow: column wrap;
-    height: 1400px;
+    height: 1600px;
   }
   > #scoreboard {
     text-align: center;
     font-size: 1.5em;
-    border: 2px solid #222;
-    margin-bottom: 5px;
-    padding: 15px;
-    width: 30%;
-    position: sticky;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin-bottom: 10px;
+    width: 35%;
     color:$white;
     background-color: rgba(0,0,0, 0.8);
     // @media (max-width: 1500px) {
