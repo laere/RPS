@@ -4,16 +4,20 @@ window.onload = function() {
       CHOICE_PAPER = document.querySelector('#paper'),
       CHOICE_SCISSORS = document.querySelector('#scissors'),
       WINNER_TXT = document.querySelector('#winner'),
-      BUTTONS = document.querySelectorAll('input'),
       COMP_IMG = document.querySelector('#compChoice'),
-      USER_SCORE_EL = document.querySelector('#user-score'),
-      COMP_SCORE_EL = document.querySelector('#computer-score'),
       PLAYER_CHOICE = document.querySelector('#player-choice'),
       TWEET = document.querySelector('#tweet'),
+      TWEET_TAGLINE = document.querySelectorAll('#scoreboard div')[2],
       USER_SCORE = 0,
       COMPUTER_SCORE = 0,
-      GAME_SCORE = { USER_SCORE: 0, COMPUTER_SCORE: 0}, // add pt to each per win, stringify to local Storage
+      GAME_SCORE = {
+        USER: 0,
+        COMPUTER: 0
+        }, // add pt to each per win, stringify to local Storage
       key = 'scores';
+
+      TWEET_TAGLINE.style.fontSize = '.55em';
+
 
   CHOICE_ROCK.addEventListener('click', USER_CHOICE, false);
   CHOICE_PAPER.addEventListener('click', USER_CHOICE, false);
@@ -23,38 +27,40 @@ window.onload = function() {
     var message = 'Checkout this awesome Rock, Paper and Scissors game!';
     message += ' https://www.github.com/laere/RPS - ';
     message += ' My score was ' + USER_SCORE + '.  The computers score was ' + COMPUTER_SCORE + ' .';
-    message += ' Think you can beat me?';
-    message += ' I bet you cant!';
+    // message += ' Think you can beat me?';
+    // message += ' I bet you cant!';
     window.open('https://twitter.com/intent/tweet?text=' + message);
   }, false );
 
   // Return user choice value;
   function USER_CHOICE(e) {
-    var compChoice = COMPUTER_CHOICE();
-    var el = e.target;
+    var compChoice = COMPUTER_CHOICE(),
+        el = e.target,
+        USER_SCORE_EL = document.querySelector('#user-score'),
+        COMP_SCORE_EL = document.querySelector('#computer-score');
     if (el === CHOICE_ROCK) {
-      console.log('USER CHOICE: ROCK');
-      console.log('COMPS CHOICE: ' + compChoice);
-      console.log(USER_SCORE);
-      console.log(COMPUTER_SCORE);
+      // console.log('USER CHOICE: ROCK');
+      // console.log('COMPS CHOICE: ' + compChoice);
+      // console.log(USER_SCORE);
+      // console.log(COMPUTER_SCORE);
       ROCK('rock', compChoice);
       PLAYER_CHOICE_STYLE('ROCK!');
       USER_SCORE_EL.innerHTML = 'Your Score : ' + USER_SCORE;
       COMP_SCORE_EL.innerHTML = 'Computer Score : ' + COMPUTER_SCORE;
     } else if (el === CHOICE_PAPER) {
-      console.log('USER CHOICE: PAPER');
-      console.log('COMPS CHOICE: ' + compChoice);
-      console.log(USER_SCORE);
-      console.log(COMPUTER_SCORE);
+      // console.log('USER CHOICE: PAPER');
+      // console.log('COMPS CHOICE: ' + compChoice);
+      // console.log(USER_SCORE);
+      // console.log(COMPUTER_SCORE);
       PAPER('paper', compChoice);
       PLAYER_CHOICE_STYLE('PAPER!');
       USER_SCORE_EL.innerHTML = 'Your Score : ' + USER_SCORE;
       COMP_SCORE_EL.innerHTML = 'Computer Score : ' + COMPUTER_SCORE;
     } else if (el === CHOICE_SCISSORS) {
-      console.log('USER CHOICE: SCISSORS');
-      console.log('COMPS CHOICE: ' + compChoice);
-      console.log(USER_SCORE);
-      console.log(COMPUTER_SCORE);
+      // console.log('USER CHOICE: SCISSORS');
+      // console.log('COMPS CHOICE: ' + compChoice);
+      // console.log(USER_SCORE);
+      // console.log(COMPUTER_SCORE);
       SCISSORS('scissors', compChoice);
       PLAYER_CHOICE_STYLE('SCISSORS!');
       USER_SCORE_EL.innerHTML = 'Your Score : ' + USER_SCORE;
