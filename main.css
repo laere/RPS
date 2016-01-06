@@ -550,7 +550,7 @@ div {
 
 .container {
   width: 90%;
-  height: 1000px;
+  height: 1100px;
   margin: 0 auto;
   display: flex;
   flex-flow: column wrap;
@@ -579,6 +579,12 @@ div {
     @media (max-width: 440px) {
       .container > #scoreboard {
         width: 100%; } }
+    .container > #scoreboard > #tweet {
+      width: 40px;
+      height: 40px; }
+      .container > #scoreboard > #tweet:hover {
+        opacity: .7;
+        cursor: pointer; }
   .container > .header {
     font-size: 3.5em;
     animation: glow .2s infinite; }
@@ -598,9 +604,13 @@ div {
     @media (max-width: 940px) {
       .container > div #winner {
         font-size: 1.5em; } }
+  .container > div #compChoice {
+    height: 100px;
+    width: 100px; }
   .container > .inner-container {
     width: 80%;
     height: 400px;
+    margin: 10px 0;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -628,14 +638,9 @@ div {
           width: 60%;
           box-shadow: 0 8px 6px -6px black; }
         .container > .inner-container > .row > .items > .rps:hover {
-          animation: grow 0.2s;
-          animation-timing-function: ease-out;
-          animation-delay: 0;
-          animation-direction: alternate;
-          animation-iteration-count: infinite;
-          animation-fill-mode: none;
-          animation-play-state: running; }
-@keyframes grow {
+          animation: grow-up 0.3s 1;
+          cursor: pointer; }
+@keyframes grow-up {
   0% {
     width: 200px;
     height: 200px; }
