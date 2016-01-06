@@ -9,6 +9,8 @@ Make computers choice an image. **DONE**
 
 Display what player/comp chooses. **DONE**
 
+Clicking image should select choice.
+
 Add sounds for choices.
 
 When player chooses item, hide two that aren't chosen, center chosen item.
