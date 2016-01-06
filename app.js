@@ -1,16 +1,16 @@
 window.onload = function() {
   //vars scope may change in the future.
   var CHOICE_ROCK = document.querySelector('#rock'),
-  CHOICE_PAPER = document.querySelector('#paper'),
-  CHOICE_SCISSORS = document.querySelector('#scissors'),
-  WINNER_TXT = document.querySelector('#winner'),
-  BUTTONS = document.querySelectorAll('input'),
-  COMP_TXT = document.querySelector('#compChoice'),
-  USER_SCORE_EL = document.querySelector('#user-score'),
-  COMP_SCORE_EL = document.querySelector('#computer-score'),
-  USER_SCORE = 0,
-  COMPUTER_SCORE = 0,
-  LOCAL_STORAGE = [];
+      CHOICE_PAPER = document.querySelector('#paper'),
+      CHOICE_SCISSORS = document.querySelector('#scissors'),
+      WINNER_TXT = document.querySelector('#winner'),
+      BUTTONS = document.querySelectorAll('input'),
+      COMP_IMG = document.querySelector('#compChoice'),
+      USER_SCORE_EL = document.querySelector('#user-score'),
+      COMP_SCORE_EL = document.querySelector('#computer-score'),
+      USER_SCORE = 0,
+      COMPUTER_SCORE = 0,
+      LOCAL_STORAGE = [];
 
   CHOICE_ROCK.addEventListener('click', USER_CHOICE, false);
   CHOICE_PAPER.addEventListener('click', USER_CHOICE, false);
@@ -20,7 +20,6 @@ window.onload = function() {
     var compChoice = COMPUTER_CHOICE();
     var el = e.target;
     if (el === CHOICE_ROCK) {
-      COMP_TXT.innerHTML = compChoice + ' is the computers choice!';
       console.log('USER CHOICE: ROCK');
       console.log('COMPS CHOICE: ' + compChoice);
       console.log(USER_SCORE);
@@ -29,7 +28,6 @@ window.onload = function() {
       USER_SCORE_EL.innerHTML = 'Your Score : ' + USER_SCORE;
       COMP_SCORE_EL.innerHTML = 'Computer Score : ' + COMPUTER_SCORE;
     } else if (el === CHOICE_PAPER) {
-      COMP_TXT.innerHTML = compChoice + ' is the computers choice!';
       console.log('USER CHOICE: PAPER');
       console.log('COMPS CHOICE: ' + compChoice);
       console.log(USER_SCORE);
@@ -38,7 +36,6 @@ window.onload = function() {
       USER_SCORE_EL.innerHTML = 'Your Score : ' + USER_SCORE;
       COMP_SCORE_EL.innerHTML = 'Computer Score : ' + COMPUTER_SCORE;
     } else if (el === CHOICE_SCISSORS) {
-      COMP_TXT.innerHTML = compChoice + ' is the computers choice!';
       console.log('USER CHOICE: SCISSORS');
       console.log('COMPS CHOICE: ' + compChoice);
       console.log(USER_SCORE);
@@ -54,10 +51,13 @@ window.onload = function() {
     var num = Math.floor(Math.random() * 3) + 1;
     console.log('COMP CHOICE number: ' + num);
     if (num === 1) {
+      COMP_IMG.setAttribute('src', 'images/rock.png');
       return 'rock';
     } else if (num === 2) {
+      COMP_IMG.setAttribute('src', 'images/paper.png');
       return 'paper';
     } else if (num === 3) {
+      COMP_IMG.setAttribute('src', 'images/scissors.png');
       return 'scissors';
     }
   }
