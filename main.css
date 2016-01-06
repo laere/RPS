@@ -564,7 +564,7 @@ div {
     text-align: center;
     font-size: 1.5em;
     border: 2px solid #222;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     padding: 15px;
     width: 30%;
     position: sticky;
@@ -620,5 +620,29 @@ div {
         .container > .inner-container > .row > .items > div input[type=submit] {
           width: 60%;
           box-shadow: 0 8px 6px -6px black; }
+        .container > .inner-container > .row > .items > .rps:hover {
+          animation: grow 0.2s;
+          animation-timing-function: ease-out;
+          animation-delay: 0;
+          animation-direction: alternate;
+          animation-iteration-count: infinite;
+          animation-fill-mode: none;
+          animation-play-state: running; }
+@keyframes grow {
+  0% {
+    width: 200px;
+    height: 200px; }
+  25% {
+    width: 210px;
+    height: 210px; }
+  50% {
+    width: 220px;
+    height: 220px; }
+  75% {
+    width: 230px;
+    height: 230px; }
+  100% {
+    width: 240px;
+    height: 240px; } }
 
 /*# sourceMappingURL=main.css.map */
