@@ -17,7 +17,7 @@ When player chooses item, hide two that aren't chosen, center chosen item.
 
 Make the game more visually appealing.
 
-Allow users to tweet their score.
+Allow users to tweet their score.**DONE**
 
 Add animation **DONE**
 
