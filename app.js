@@ -11,7 +11,7 @@ window.onload = function() {
       PLAYER_CHOICE = document.querySelector('#player-choice'),
       USER_SCORE = 0,
       COMPUTER_SCORE = 0,
-      GAME_SCORE = { USER_SCORE: 0, COMPUTER_SCORE: 0}; // add pt to each per win, stringify to local Storage
+      GAME_SCORE = {}; // add pt to each per win, stringify to local Storage
       key = 'scores';
 
   CHOICE_ROCK.addEventListener('click', USER_CHOICE, false);
