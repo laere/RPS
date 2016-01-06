@@ -38,7 +38,7 @@ div {
 ///// ELEMENT STYLES /////////////////////////
 .container {
   width: 90%;
-  height: 1100px;
+  height: 1000px;
   margin: 0 auto;
   display: flex;
   flex-flow: column wrap;
@@ -52,7 +52,7 @@ div {
     text-align: center;
     font-size: 1.5em;
     border: 2px solid #222;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     padding: 15px;
     width: 30%;
     position: sticky;
@@ -71,17 +71,17 @@ div {
       width: 100%;
     }
   }
-  > .footer {
-    background-color: #700353;
-    width: 60%;
-    color: $white;
-    border-radius: 30px;
-    padding: 10px 0;
-    box-shadow: 0 8px 6px -6px black;
-    @media (max-width: 440px) {
-      width: 100%;
-    }
-  }
+  // > .footer {
+  //   background-color: #700353;
+  //   width: 60%;
+  //   color: $white;
+  //   border-radius: 30px;
+  //   padding: 10px 0;
+  //   box-shadow: 0 8px 6px -6px black;
+  //   @media (max-width: 440px) {
+  //     width: 100%;
+  //   }
+  // }
   > .header {
     font-size: 3.5em;
     text-shadow: 1px 1px 3px black;
@@ -90,14 +90,15 @@ div {
     }
   }
   > div #winner {
-    font-size: 2em;
+    font-size: 1.8em;
+    font-weight: bold;
     @media (max-width: 940px) {
       font-size: 1.5em;
     }
   }
   > .inner-container {
     width: 80%;
-    height: 500px;
+    height: 400px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -121,7 +122,7 @@ div {
       }
       > .items {
         flex: 1 100%;
-        padding: 20px 0;
+        padding: 10px 0;
           > div input[type=submit] {
             width: 60%;
             box-shadow: 0 8px 6px -6px black;
