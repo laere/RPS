@@ -38,7 +38,7 @@ div {
 ///// ELEMENT STYLES /////////////////////////
 .container {
   width: 90%;
-  height: 1000px;
+  height: 1100px;
   margin: 0 auto;
   display: flex;
   flex-flow: column wrap;
@@ -70,6 +70,15 @@ div {
     @media (max-width: 440px) {
       width: 100%;
     }
+      > #tweet  {
+        width: 40px;
+        height: 40px;
+          &:hover {
+            opacity: .7;
+            cursor: pointer;
+          }
+
+      }
   }
   // > .footer {
   //   background-color: #700353;
@@ -107,9 +116,14 @@ div {
       font-size: 1.5em;
     }
   }
+  > div #compChoice {
+    height: 100px;
+    width: 100px;
+  }
   > .inner-container {
     width: 80%;
     height: 400px;
+    margin: 10px 0;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -139,15 +153,11 @@ div {
           box-shadow: 0 8px 6px -6px black;
         }
         > .rps:hover {
-          animation: grow 0.2s;
-          animation-timing-function: ease-out;
-          animation-delay: 0;
-          animation-direction: alternate;
-          animation-iteration-count: infinite;
-          animation-fill-mode: none;
-          animation-play-state: running;
+          animation: grow-up 0.3s 1;
+          cursor: pointer;
+
         }
-        @keyframes grow {
+        @keyframes grow-up {
           0% {
             width: 200px;
             height: 200px;
@@ -169,6 +179,28 @@ div {
             height: 240px;
           }
         }
+        // @keyframes grow-down {
+        //   100% {
+        //     width: 240px;
+        //     height: 240px;
+        //   }
+        //   75% {
+        //     width: 230px;
+        //     height: 230px;
+        //   }
+        //   50% {
+        //     width: 220px;
+        //     height: 220px;
+        //   }
+        //   25% {
+        //     width: 210px;
+        //     height: 210px;
+        //   }
+        //   0% {
+        //     width: 200px;
+        //     height: 200px;
+        //   }
+        // }
       }
     }
   }
