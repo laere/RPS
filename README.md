@@ -5,6 +5,8 @@
 
 Keep track of player wins and computer wins **DONE**
 
+Make computers choice an image.
+
 Make the game more visually appealing.
 
 Allow users to tweet their score.
