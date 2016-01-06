@@ -71,13 +71,26 @@ div {
       width: 100%;
     }
       > #tweet  {
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
           &:hover {
             opacity: .7;
             cursor: pointer;
-          }
+            animation: grow .5s ease-out;
+            animation-fill-mode: forwards;
 
+          }
+      }
+      @keyframes grow {
+        0% {
+        transform: scale(1),
+        }
+        50% {
+          transform: scale(1.25);
+        }
+        100% {
+          transform: scale(1.5);
+        }
       }
   }
   // > .footer {
@@ -151,32 +164,33 @@ div {
         > div input[type=submit] {
           width: 60%;
           box-shadow: 0 8px 6px -6px black;
+            // &:hover {
+            //   animation: grow-sides 1s ease-out;
+            //   animation-fill-mode: forwards;
+            // }
         }
+        // @keyframes grow-sides {
+        //   0% {
+        //     width: 87.125px;
+        //   }
+        //   100% {
+        //     width: 60%;
+        //   }
+        // }
         > .rps:hover {
-          animation: grow-up 0.3s 1;
+          animation: grow-two 0.5s ease-out;
+          animation-fill-mode: forwards;
           cursor: pointer;
-
         }
-        @keyframes grow-up {
+        @keyframes grow-two {
           0% {
-            width: 200px;
-            height: 200px;
-          }
-          25% {
-            width: 210px;
-            height: 210px;
+            transform: scale(1);
           }
           50% {
-            width: 220px;
-            height: 220px;
-          }
-          75% {
-            width: 230px;
-            height: 230px;
+            transform: scale(1.05);
           }
           100% {
-            width: 240px;
-            height: 240px;
+            transform: scale(1.15);
           }
         }
         // @keyframes grow-down {
