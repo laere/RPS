@@ -550,7 +550,7 @@ div {
 
 .container {
   width: 90%;
-  height: 1100px;
+  height: 1000px;
   margin: 0 auto;
   display: flex;
   flex-flow: column wrap;
@@ -564,7 +564,7 @@ div {
     text-align: center;
     font-size: 1.5em;
     border: 2px solid #222;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     padding: 15px;
     width: 30%;
     position: sticky;
@@ -579,16 +579,6 @@ div {
     @media (max-width: 440px) {
       .container > #scoreboard {
         width: 100%; } }
-  .container > .footer {
-    background-color: #700353;
-    width: 60%;
-    color: #fff;
-    border-radius: 30px;
-    padding: 10px 0;
-    box-shadow: 0 8px 6px -6px black; }
-    @media (max-width: 440px) {
-      .container > .footer {
-        width: 100%; } }
   .container > .header {
     font-size: 3.5em;
     text-shadow: 1px 1px 3px black; }
@@ -596,13 +586,14 @@ div {
       .container > .header {
         font-size: 2em; } }
   .container > div #winner {
-    font-size: 2em; }
+    font-size: 1.8em;
+    font-weight: bold; }
     @media (max-width: 940px) {
       .container > div #winner {
         font-size: 1.5em; } }
   .container > .inner-container {
     width: 80%;
-    height: 500px;
+    height: 400px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
@@ -625,7 +616,7 @@ div {
           flex-flow: column wrap; } }
       .container > .inner-container > .row > .items {
         flex: 1 100%;
-        padding: 20px 0; }
+        padding: 10px 0; }
         .container > .inner-container > .row > .items > div input[type=submit] {
           width: 60%;
           box-shadow: 0 8px 6px -6px black; }
