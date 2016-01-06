@@ -61,13 +61,13 @@ window.onload = function() {
     var num = Math.floor(Math.random() * 3) + 1;
     console.log('COMP CHOICE number: ' + num);
     if (num === 1) {
-      COMP_IMG.setAttribute('src', 'images/rock.png');
+      COMP_IMG.setAttribute('src', 'http://i.imgur.com/OHt2rjH.png');
       return 'rock';
     } else if (num === 2) {
-      COMP_IMG.setAttribute('src', 'images/paper.png');
+      COMP_IMG.setAttribute('src', 'http://i.imgur.com/H86s3q4.png');
       return 'paper';
     } else if (num === 3) {
-      COMP_IMG.setAttribute('src', 'images/scissors.png');
+      COMP_IMG.setAttribute('src', 'http://i.imgur.com/rAkxkWc.png');
       return 'scissors';
     }
   }
