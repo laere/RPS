@@ -25,7 +25,7 @@ window.onload = function() {
   //tweet your score
   TWEET.addEventListener('click', function() {
     var message = 'Checkout this awesome Rock, Paper and Scissors game!';
-    message += '';
+    message += ' https://laere.github.io/RPS - ';
     message += ' My score was ' + USER_SCORE + '.  The computers score was ' + COMPUTER_SCORE + ' .';
     // message += ' Think you can beat me?';
     // message += ' I bet you cant!';
