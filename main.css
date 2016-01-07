@@ -583,7 +583,8 @@ div {
         width: 100%; } }
     .container > #scoreboard > #tweet {
       width: 30px;
-      height: 30px; }
+      height: 30px;
+      margin-bottom: 5px; }
       .container > #scoreboard > #tweet:hover {
         opacity: .7;
         cursor: pointer;
