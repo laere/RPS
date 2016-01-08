@@ -13,9 +13,7 @@ Clicking image should select choice. **DONE**
 
 Add sounds for choices.
 
-When player chooses item, hide two that aren't chosen, center chosen item.
-
-Make the game more visually appealing.
+Make the game more visually appealing. **DONE**
 
 Allow users to tweet their score.**DONE**
 
