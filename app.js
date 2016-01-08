@@ -3,6 +3,9 @@ window.onload = function() {
   var CHOICE_ROCK = document.querySelector('#rock'),
       CHOICE_PAPER = document.querySelector('#paper'),
       CHOICE_SCISSORS = document.querySelector('#scissors'),
+      IMG_ROCK = document.querySelector('#rock-img'),
+      IMG_PAPER = document.querySelector('#paper-img'),
+      IMG_SCISSORS = document.querySelector('#scissors-img'),
       WINNER_TXT = document.querySelector('#winner'),
       COMP_IMG = document.querySelector('#compChoice'),
       PLAYER_CHOICE = document.querySelector('#player-choice'),
@@ -22,6 +25,10 @@ window.onload = function() {
   CHOICE_ROCK.addEventListener('click', USER_CHOICE, false);
   CHOICE_PAPER.addEventListener('click', USER_CHOICE, false);
   CHOICE_SCISSORS.addEventListener('click', USER_CHOICE, false);
+
+  IMG_ROCK.addEventListener('click', USER_CHOICE, false);
+  IMG_PAPER.addEventListener('click', USER_CHOICE, false);
+  IMG_SCISSORS.addEventListener('click', USER_CHOICE, false);
   //tweet your score
   TWEET.addEventListener('click', function() {
     var message = 'Checkout this awesome Rock, Paper and Scissors game!';
@@ -38,7 +45,7 @@ window.onload = function() {
         el = e.target,
         USER_SCORE_EL = document.querySelector('#user-score'),
         COMP_SCORE_EL = document.querySelector('#computer-score');
-    if (el === CHOICE_ROCK) {
+    if (el === CHOICE_ROCK || el === IMG_ROCK) {
       // console.log('USER CHOICE: ROCK');
       // console.log('COMPS CHOICE: ' + compChoice);
       // console.log(USER_SCORE);
@@ -47,7 +54,7 @@ window.onload = function() {
       PLAYER_CHOICE_STYLE('ROCK!');
       USER_SCORE_EL.innerHTML = 'Your Score : ' + USER_SCORE;
       COMP_SCORE_EL.innerHTML = 'Computer Score : ' + COMPUTER_SCORE;
-    } else if (el === CHOICE_PAPER) {
+    } else if (el === CHOICE_PAPER || el === IMG_PAPER) {
       // console.log('USER CHOICE: PAPER');
       // console.log('COMPS CHOICE: ' + compChoice);
       // console.log(USER_SCORE);
@@ -56,7 +63,7 @@ window.onload = function() {
       PLAYER_CHOICE_STYLE('PAPER!');
       USER_SCORE_EL.innerHTML = 'Your Score : ' + USER_SCORE;
       COMP_SCORE_EL.innerHTML = 'Computer Score : ' + COMPUTER_SCORE;
-    } else if (el === CHOICE_SCISSORS) {
+    } else if (el === CHOICE_SCISSORS || el === IMG_SCISSORS) {
       // console.log('USER CHOICE: SCISSORS');
       // console.log('COMPS CHOICE: ' + compChoice);
       // console.log(USER_SCORE);
