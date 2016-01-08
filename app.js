@@ -18,10 +18,7 @@ window.onload = function() {
         COMPUTER: 0
         }, // add pt to each per win, stringify to local Storage
       key = 'scores';
-
-      TWEET_TAGLINE.style.fontSize = '.55em';
-
-
+  // document.addEventListener('click', BATMAN, false);
   CHOICE_ROCK.addEventListener('click', USER_CHOICE, false);
   CHOICE_PAPER.addEventListener('click', USER_CHOICE, false);
   CHOICE_SCISSORS.addEventListener('click', USER_CHOICE, false);
@@ -31,6 +28,7 @@ window.onload = function() {
   IMG_SCISSORS.addEventListener('click', USER_CHOICE, false);
   //tweet your score
   TWEET.addEventListener('click', function() {
+    TWEET_TAGLINE.style.fontSize = '.55em';
     var message = 'Checkout this awesome Rock, Paper and Scissors game!';
     message += ' https://laere.github.io/RPS - ';
     message += ' My score was ' + USER_SCORE + '.  The computers score was ' + COMPUTER_SCORE + ' .';
@@ -46,30 +44,33 @@ window.onload = function() {
         USER_SCORE_EL = document.querySelector('#user-score'),
         COMP_SCORE_EL = document.querySelector('#computer-score');
     if (el === CHOICE_ROCK || el === IMG_ROCK) {
-      // console.log('USER CHOICE: ROCK');
-      // console.log('COMPS CHOICE: ' + compChoice);
-      // console.log(USER_SCORE);
-      // console.log(COMPUTER_SCORE);
+      console.log('USER CHOICE: ROCK');
+      console.log('COMPS CHOICE: ' + compChoice);
+      console.log(USER_SCORE);
+      console.log(COMPUTER_SCORE);
       ROCK('rock', compChoice);
       PLAYER_CHOICE_STYLE('ROCK!');
+      BATMAN_RETURNS();
       USER_SCORE_EL.innerHTML = 'Your Score : ' + USER_SCORE;
       COMP_SCORE_EL.innerHTML = 'Computer Score : ' + COMPUTER_SCORE;
     } else if (el === CHOICE_PAPER || el === IMG_PAPER) {
-      // console.log('USER CHOICE: PAPER');
-      // console.log('COMPS CHOICE: ' + compChoice);
-      // console.log(USER_SCORE);
-      // console.log(COMPUTER_SCORE);
+      console.log('USER CHOICE: PAPER');
+      console.log('COMPS CHOICE: ' + compChoice);
+      console.log(USER_SCORE);
+      console.log(COMPUTER_SCORE);
       PAPER('paper', compChoice);
       PLAYER_CHOICE_STYLE('PAPER!');
+      BATMAN_RETURNS();
       USER_SCORE_EL.innerHTML = 'Your Score : ' + USER_SCORE;
       COMP_SCORE_EL.innerHTML = 'Computer Score : ' + COMPUTER_SCORE;
     } else if (el === CHOICE_SCISSORS || el === IMG_SCISSORS) {
-      // console.log('USER CHOICE: SCISSORS');
-      // console.log('COMPS CHOICE: ' + compChoice);
-      // console.log(USER_SCORE);
-      // console.log(COMPUTER_SCORE);
+      console.log('USER CHOICE: SCISSORS');
+      console.log('COMPS CHOICE: ' + compChoice);
+      console.log(USER_SCORE);
+      console.log(COMPUTER_SCORE);
       SCISSORS('scissors', compChoice);
       PLAYER_CHOICE_STYLE('SCISSORS!');
+      BATMAN_RETURNS();
       USER_SCORE_EL.innerHTML = 'Your Score : ' + USER_SCORE;
       COMP_SCORE_EL.innerHTML = 'Computer Score : ' + COMPUTER_SCORE;
     }
@@ -145,6 +146,25 @@ window.onload = function() {
       WINNER_TXT.innerHTML = 'ITS A TIE!!!!!';
     }
   }
+  function BATMAN() {
+    var BAT_IMG = document.createElement('img');
+    var items = document.querySelector('.items');
+
+    BAT_IMG.setAttribute('src', 'https://yt3.ggpht.com/-Q-EOVmHBU9A/AAAAAAAAAAI/AAAAAAAAAAA/3Ny_WeU6rgk/s900-c-k-no/photo.jpg');
+    BAT_IMG.setAttribute('id', 'batman');
+    BAT_IMG.style.display = 'block';
+    BAT_IMG.style.width = '200px';
+    BAT_IMG.style.height = '200px';
+
+    items.appendChild(BAT_IMG);
+  }
+
+  function BATMAN_RETURNS() {
+    if (USER_SCORE === parseInt('5')) {
+      BATMAN();
+    }
+  }
+
 
   function PLAYER_CHOICE_STYLE(choice) {
     PLAYER_CHOICE.innerHTML = 'You chose: ' + choice;
