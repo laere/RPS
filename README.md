@@ -21,6 +21,6 @@ Add animation **DONE**
 
 Add Local Storage!
 
-Add funny choices like chuck norris, batman, etc.
+Add funny choices like chuck norris, batman, etc. **DONE** Will add more later!
 
 
