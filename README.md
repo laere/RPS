@@ -9,7 +9,7 @@ Make computers choice an image. **DONE**
 
 Display what player/comp chooses. **DONE**
 
-Clicking image should select choice.
+Clicking image should select choice. **DONE**
 
 Add sounds for choices.
 
