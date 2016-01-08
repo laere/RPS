@@ -1,23 +1,23 @@
 window.onload = function() {
   //vars scope may change in the future.
   var CHOICE_ROCK = document.querySelector('#rock'),
-      CHOICE_PAPER = document.querySelector('#paper'),
-      CHOICE_SCISSORS = document.querySelector('#scissors'),
-      IMG_ROCK = document.querySelector('#rock-img'),
-      IMG_PAPER = document.querySelector('#paper-img'),
-      IMG_SCISSORS = document.querySelector('#scissors-img'),
-      WINNER_TXT = document.querySelector('#winner'),
-      COMP_IMG = document.querySelector('#compChoice'),
-      PLAYER_CHOICE = document.querySelector('#player-choice'),
-      TWEET = document.querySelector('#tweet'),
-      TWEET_TAGLINE = document.querySelectorAll('#scoreboard div')[2],
-      USER_SCORE = 0,
-      COMPUTER_SCORE = 0,
-      GAME_SCORE = {
-        USER: 0,
-        COMPUTER: 0
-        }, // add pt to each per win, stringify to local Storage
-      key = 'scores';
+  CHOICE_PAPER = document.querySelector('#paper'),
+  CHOICE_SCISSORS = document.querySelector('#scissors'),
+  IMG_ROCK = document.querySelector('#rock-img'),
+  IMG_PAPER = document.querySelector('#paper-img'),
+  IMG_SCISSORS = document.querySelector('#scissors-img'),
+  WINNER_TXT = document.querySelector('#winner'),
+  COMP_IMG = document.querySelector('#compChoice'),
+  PLAYER_CHOICE = document.querySelector('#player-choice'),
+  TWEET = document.querySelector('#tweet'),
+  TWEET_TAGLINE = document.querySelectorAll('#scoreboard div')[2],
+  USER_SCORE = 0,
+  COMPUTER_SCORE = 0,
+  GAME_SCORE = {
+    USER: 0,
+    COMPUTER: 0
+  }, // add pt to each per win, stringify to local Storage
+  key = 'scores';
   // document.addEventListener('click', BATMAN, false);
   CHOICE_ROCK.addEventListener('click', USER_CHOICE, false);
   CHOICE_PAPER.addEventListener('click', USER_CHOICE, false);
@@ -40,9 +40,9 @@ window.onload = function() {
   // Return user choice value;
   function USER_CHOICE(e) {
     var compChoice = COMPUTER_CHOICE(),
-        el = e.target,
-        USER_SCORE_EL = document.querySelector('#user-score'),
-        COMP_SCORE_EL = document.querySelector('#computer-score');
+    el = e.target,
+    USER_SCORE_EL = document.querySelector('#user-score'),
+    COMP_SCORE_EL = document.querySelector('#computer-score');
     if (el === CHOICE_ROCK || el === IMG_ROCK) {
       console.log('USER CHOICE: ROCK');
       console.log('COMPS CHOICE: ' + compChoice);
@@ -148,7 +148,17 @@ window.onload = function() {
   }
   function BATMAN() {
     var BAT_IMG = document.createElement('img');
+    var BAT_BUTTON = document.createElement('input');
     var items = document.querySelector('.items');
+
+    BAT_BUTTON.setAttribute('type', 'submit');
+    BAT_BUTTON.setAttribute('value', 'THE BATMAN!');
+    BAT_BUTTON.style.display = 'block';
+    BAT_BUTTON.style.width = '400px';
+    BAT_BUTTON.style.height = '100px';
+    BAT_BUTTON.style.backgroundColor = '#3e3e3e';
+    BAT_BUTTON.style.fontSize = '2em';
+    BAT_BUTTON.style.fontFamily = 'Batman Forever';
 
     BAT_IMG.setAttribute('src', 'https://yt3.ggpht.com/-Q-EOVmHBU9A/AAAAAAAAAAI/AAAAAAAAAAA/3Ny_WeU6rgk/s900-c-k-no/photo.jpg');
     BAT_IMG.setAttribute('id', 'batman');
@@ -156,12 +166,13 @@ window.onload = function() {
     BAT_IMG.style.width = '200px';
     BAT_IMG.style.height = '200px';
 
+    items.appendChild(BAT_BUTTON);
     items.appendChild(BAT_IMG);
   }
 
   function BATMAN_RETURNS() {
     if (USER_SCORE === parseInt('5')) {
-      BATMAN();
+      return BATMAN();
     }
   }
 
