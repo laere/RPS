@@ -81,15 +81,15 @@ window.onload = function() {
     var num = Math.floor(Math.random() * 3) + 1;
     console.log('COMP CHOICE number: ' + num);
     if (num === 1) {
-      COMP_IMG.setAttribute('src', 'http://i.imgur.com/OHt2rjH.png');
+      COMP_IMG.setAttribute('src', "https://cdn0.iconfinder.com/data/icons/rock-paper-scissors-emoji/792/rock-paper-scissors-emoji-cartoon-027-128.png");
       COMP_IMG.style.border = '1px solid black';
       return 'rock';
     } else if (num === 2) {
-      COMP_IMG.setAttribute('src', 'http://i.imgur.com/H86s3q4.png');
+      COMP_IMG.setAttribute('src', "https://cdn0.iconfinder.com/data/icons/rock-paper-scissors-emoji/792/rock-paper-scissors-emoji-cartoon-019-256.png");
       COMP_IMG.style.border = '1px solid black';
       return 'paper';
     } else if (num === 3) {
-      COMP_IMG.setAttribute('src', 'http://i.imgur.com/rAkxkWc.png');
+      COMP_IMG.setAttribute('src', "https://cdn0.iconfinder.com/data/icons/rock-paper-scissors-emoji/792/rock-paper-scissors-emoji-cartoon-014-512.png");
       COMP_IMG.style.border = '1px solid black';
       return 'scissors';
     }
