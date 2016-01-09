@@ -36,7 +36,6 @@ window.onload = function() {
     // message += ' I bet you cant!';
     window.open('https://twitter.com/intent/tweet?text=' + message);
   }, false );
-
   // Return user choice value;
   function USER_CHOICE(e) {
     var compChoice = COMPUTER_CHOICE(),
@@ -153,12 +152,12 @@ window.onload = function() {
 
     BAT_BUTTON.setAttribute('type', 'submit');
     BAT_BUTTON.setAttribute('value', 'THE BATMAN!');
+    BAT_BUTTON.setAttribute('id', 'bat-button');
     BAT_BUTTON.style.display = 'block';
     BAT_BUTTON.style.width = '400px';
     BAT_BUTTON.style.height = '100px';
     BAT_BUTTON.style.backgroundColor = '#3e3e3e';
     BAT_BUTTON.style.fontSize = '2em';
-    BAT_BUTTON.style.fontFamily = 'Batman Forever';
 
     BAT_IMG.setAttribute('src', 'https://yt3.ggpht.com/-Q-EOVmHBU9A/AAAAAAAAAAI/AAAAAAAAAAA/3Ny_WeU6rgk/s900-c-k-no/photo.jpg');
     BAT_IMG.setAttribute('id', 'batman');
@@ -169,14 +168,12 @@ window.onload = function() {
     items.appendChild(BAT_BUTTON);
     items.appendChild(BAT_IMG);
   }
-
   function BATMAN_RETURNS() {
-    if (USER_SCORE === parseInt('5')) {
+    if (USER_SCORE === parseInt('15')) {
+      USER_SCORE ++;
       return BATMAN();
     }
   }
-
-
   function PLAYER_CHOICE_STYLE(choice) {
     PLAYER_CHOICE.innerHTML = 'You chose: ' + choice;
     PLAYER_CHOICE.style.fontWeight = 'bold';
