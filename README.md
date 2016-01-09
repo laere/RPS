@@ -3,7 +3,7 @@
 
 <h1>Things to add:</h1>
 
-Change computer choice images to user choice images.
+Change computer choice images to user choice images. **DONE**
 
 Keep track of player wins and computer wins **DONE**
 
